@@ -569,10 +569,11 @@
       background-position: top right !important; } }
   @media screen and (max-width: 768px) {
     .g-seventh {
-      background: url("../assets/img/block7-mob.png") no-repeat;
+      background: url("../assets/img/block7-mob.jpg") no-repeat;
       background-size: cover;
       background-position: top center;
-      height: 800px;
+      height: 480px;
+      max-height: 560px;
       margin-bottom: 38vw;
       -webkit-box-align: end;
       -webkit-align-items: flex-end;
