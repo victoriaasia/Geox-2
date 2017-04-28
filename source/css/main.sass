@@ -373,6 +373,42 @@
       display: block
 
 
+.g-sixth
+  height: 410px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  @include bp-table
+    height: 700px
+  .g-title
+    text-align: center
+    h3
+      padding: 20px 0
+      line-height: .8
+      span:first-child
+        margin-right: 110px
+        @include bp-table
+          margin-right: 0
+      span:last-child
+        margin-left: 120px
+        @include bp-table
+          margin-left: 3vw
+  .g-product
+    position: absolute
+    &:first-child
+      top: 0
+      left: 85px
+      @include bp-table
+        left: 0
+    &:last-child
+      bottom: 0
+      right: 35px
+      @include bp-table
+        right: -80px
+  .g-button-txt
+    margin: 30px auto 0
+
 .g-seventh
   background: url('../assets/img/block7.jpg') no-repeat
   background-size: cover
