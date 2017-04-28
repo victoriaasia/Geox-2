@@ -1,0 +1,581 @@
+@import "colors"
+@import "mixins"
+
+*
+  box-sizing: border-box
+  letter-spacing: 0.04em
+.g-container
+  width: 980px
+  margin: 0 auto
+  font-size: 14px
+  position: relative
+  background: white
+  @include bp-table
+    width: 100%
+
+.g-title-special
+    font-size: 0.9em
+    font-family: "pfdisplay"
+    color: white
+    font-weight: bold
+    font-style: italic
+    line-height: 1.2
+    position: absolute
+    right: 15px
+    top: 0
+    z-index: 99
+    @include bp-table
+      font-size: 1.2em
+
+.g-block
+  position: relative
+  padding: 0 55px
+  overflow: hidden
+  @include bp-table-portrait
+    height: 100vh !important
+  &__container
+    display: flex
+    @include bp-table
+      display: block
+    > section
+      flex: 1
+      padding: 0
+      display: flex
+      height: 420px
+      .g-title
+        position: relative
+        @include bp-table
+          height: 305px
+        @include bp-max-480
+          height: 230px
+      .g-button
+        position: absolute
+      @include bp-table
+        height: 800px
+        background-size: cover
+  @include bp-table
+    padding: 0
+    justify-content: center
+
+
+.g-title
+  position: relative
+  z-index: 99
+  h3
+    font-size: 3em
+    margin: 0
+    font-family: "yeseva", cursive
+    @include bp-table
+      font-size: 9vw
+    span
+      white-space: nowrap
+      &:last-child
+        white-space: nowrap
+        font-family: "pfdisplay"
+  p
+    margin: 0
+    font-size: 1.2em
+    font-family: "opensans", sans-serif
+    font-weight: bold
+    white-space: nowrap
+    @include bp-table
+      font-size: 4vw
+  &-p
+    @include bp-table
+      padding: 0 10%
+    h3
+      line-height: 0.6
+      padding-bottom: 20px
+      @include bp-table
+        padding-bottom: 6vw
+      span:last-child
+        color: $title
+    p
+      text-align: center
+      &:nth-child(2)
+        border-top: 2px dotted grey
+        padding-top: 15px
+    //
+    // .g-button
+    //   margin: 40px auto 75px
+  &-white
+    color: white
+    background: rgba(black, 0.3)
+    width: 100%
+    h3
+      line-height: 1
+
+.g-button
+  text-align: center
+  &-txt,
+  &-img
+    display: block
+    position: relative
+    @include linear-gradient(90deg, $btn, $btn2)
+    border-radius: 50%
+    width: 65px
+    height: 65px
+    text-align: center
+    outline: none
+    border: 0
+    text-decoration: none
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.4)
+    cursor: pointer
+    &:hover
+      box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.6)
+    @include transition(box-shadow .25s ease-in-out)
+    @include bp-table
+      width: 80px
+      height: 80px
+    @include bp-min-600
+      width: 100px
+      height: 100px
+  &-txt
+    width: 220px
+    height: 60px
+    padding: 20px 25px
+    border-radius: 30px
+    @include bp-table
+      height: auto
+    @include bp-min-600
+      width: 230px
+      height: 60px
+      padding: 20px 35px
+    span
+      font-size: 1.2em
+      font-family: "opensans", sans-serif
+      color: white
+      font-weight: bold
+      line-height: 1
+      text-transform: uppercase
+      padding-right: 15px
+      position: relative
+      @include bp-table
+        font-size: 1.3em
+      &::after
+        position: absolute
+        content: ''
+        background: url('../assets/img/arrow.png') no-repeat
+        width: 40px
+        height: 18px
+        background-size: contain
+        top: 50%
+        transform: translateY(-50%)
+        right: -50px
+  &-img
+    img
+      width: 40px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+
+.g-first
+  background: url('../assets/img/block1a.png') no-repeat
+  background-position: right
+  background-size: contain
+  height: 490px
+  display: flex
+  align-items: center
+  @include bp-table
+    background: url('../assets/img/block1a-mob.png') no-repeat
+    background-position: top
+    background-size: cover
+    height: 800px
+    color: white
+  h3
+    font-size: 4em
+    @include bp-table
+      font-size: 12vw
+    span:last-child
+      margin-left: 32%
+      @include bp-table
+        margin-left: 36vw
+        color: white
+  .g-product
+    position: absolute
+    width: 310px
+    bottom: -1px
+    right: 38%
+    @include bp-table
+      right: 0
+  .g-button-txt
+    margin: 40px auto 75px
+    span::after
+      right: -40px
+
+
+.g-second
+  background: url('../assets/img/block2.png') no-repeat
+  background-position: top
+  background-size: cover
+  padding: 0 0 0 55px
+  align-items: flex-end
+  .g-title
+    padding: 30px 15px
+    @include bp-table
+      padding: 60px 15px
+    @include transition(padding .25s ease-in-out)
+  h3
+    span:last-child
+      margin-left: 35px
+      @include bp-table
+        margin-left: 7vw
+  &:hover
+    .g-title
+      padding: 95px 15px 30px 15px
+      @include bp-table
+        padding: 60px 15px
+  .g-button
+    bottom: 140px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 0 10px
+    @include bp-table
+      bottom: 265px
+    @include bp-min-600
+      bottom: 255px
+    @include bp-max-480
+      bottom: 190px
+
+
+.g-third
+  background: url('../assets/img/block3.png') no-repeat
+  background-position: top
+  background-size: 100%
+  padding: 0 55px 0 0
+  align-items: flex-start
+  @include transition(background-size .5s ease-in-out)
+  &:hover
+    background-size: 110%
+    @include bp-table
+      background-size: cover
+  .g-title
+    padding: 25px 15px 45px
+    @include bp-table
+      padding: 60px 15px 80px
+  h3
+    span:last-child
+      margin-left: 55px
+      @include bp-table
+        margin-left: 9vw
+  .g-button
+    bottom: -30px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 0 10px
+    @include bp-table
+      bottom: -38px
+    @include bp-min-600
+      bottom: -50px
+
+.g-fourth
+  height: 410px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  @include bp-table
+    height: 700px
+  .g-title
+    text-align: center
+    h3
+      padding: 20px 0
+      line-height: .8
+      span:first-child
+        margin-right: 110px
+        @include bp-table
+          margin-right: 0
+      span:last-child
+        margin-left: 120px
+        @include bp-table
+          margin-left: 3vw
+  .g-decor
+    position: absolute
+    width: 405px
+    top: 0
+    left: 70px
+    @include bp-table
+      left: 1vw
+      width: 400px
+  .g-product
+    position: absolute
+    width: 365px
+    bottom: -1px
+    right: 30px
+    @include bp-table
+      right: 0
+  .g-button-txt
+    margin: 30px auto 0
+
+
+.g-fifth
+  height: 420px
+  padding: 0
+  background: $grey
+  @include bp-table
+    background: url('../assets/img/block5-mob.jpg') no-repeat
+    background-size: cover
+    height: 1000px
+    align-items: flex-end
+    justify-content: center
+    overflow: visible
+    .g-title
+      background: $grey
+      width: 100%
+      padding: 30px 10% 60px
+  &__container
+    width: 100%
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    padding: 15px 55px 45px
+    background: white
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @include bp-table
+      height: 100%
+      background: transparent
+      padding: 0
+      align-items: flex-end
+      z-index: 999
+  .g-button
+    position: absolute
+    bottom: -80px
+    left: 50%
+    transform: translateX(-50%)
+    @include bp-table
+      bottom: -38px
+    @include bp-min-600
+      bottom: -50px
+  .g-decor
+    position: relative
+    left: 0
+    z-index: 99
+    height: 100%
+    @include bp-table
+      display: none
+  h3
+    padding: 25px 0
+    span:first-child
+      margin-left: 10px
+      @include bp-table
+        margin-left: 10vw
+    span:last-child
+      margin-left: 120px
+      @include bp-table
+        margin-left: 30vw
+  p br
+    display: none
+    @include bp-table
+      display: block
+
+
+.g-seventh
+  background: url('../assets/img/block7.jpg') no-repeat
+  background-size: cover
+  height: 420px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding: 0 20px
+  @include bp-max-600
+    background-position: top right !important
+  @include bp-table
+    background: url('../assets/img/block7-mob.png') no-repeat
+    background-size: cover
+    background-position: top center
+    height: 800px
+    margin-bottom: 38vw
+    align-items: flex-end
+    justify-content: center
+    overflow: visible
+    .g-title
+      position: absolute
+      bottom: -35vw
+      padding: 0
+      left: 0
+      width: 100%
+      padding-bottom: 30px
+      display: flex
+      flex-direction: column-reverse
+      align-items: center
+      justify-content: center
+  .g-title
+    h3
+      padding: 125px 0 0
+      line-height: .8
+      br
+        display: none
+      @include bp-table
+        padding: 0
+        font-size: 7vw
+        line-height: 1
+        br
+          display: block
+        span:nth-child(3)
+          margin-left: 25vw
+      span:last-child
+        margin-left: 125px
+        @include bp-table
+          margin-left: 0
+  .g-button
+    position: absolute
+    top: 55px
+    right: 240px
+    margin: 0
+    padding: 0 10px
+    @include bp-table
+      position: static
+
+
+.g-eighth
+  height: 420px
+  padding: 0
+  background: $grey
+  z-index: 9
+  @include bp-table
+    background: url('../assets/img/block8-mob.jpg') no-repeat
+    background-size: cover
+    background-position: 50% -40vw
+    height: 1000px
+    align-items: flex-end
+    justify-content: center
+    overflow: visible
+    .g-title
+      background: $grey
+      width: 100%
+      padding: 30px 10% 60px
+  &__container
+    width: 100%
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    padding: 15px 55px 45px
+    background: white
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    @include bp-table
+      height: 100%
+      background: transparent
+      padding: 0
+      align-items: flex-end
+  .g-button
+    position: absolute
+    bottom: -80px
+    left: 50%
+    transform: translateX(-50%)
+    @include bp-table
+      bottom: -38px
+    @include bp-min-600
+      bottom: -50px
+  .g-decor
+    position: absolute
+    right: -5px
+    top: 0
+    z-index: 99
+    height: 100%
+    @include bp-table
+      display: none
+  h3
+    padding: 25px 0
+    span:first-child
+      margin-left: 10px
+      @include bp-table
+        margin-left: 10px
+    span:last-child
+      margin-left: 120px
+      @include bp-table
+        margin-left: 20vw
+  p br
+    display: none
+    @include bp-table
+      display: block
+
+
+.g-footer
+  background: $grey
+  padding: 30px 0 45px
+  @include bp-table
+    padding: 10vw 0 45px
+  &__title
+    font-size: 1.2em
+    font-family: "opensans", sans-serif
+    color: $darkGrey
+    font-weight: bold
+    text-transform: uppercase
+    text-align: center
+    @include bp-table
+      font-size: 4vw
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+.g-social-icon
+  display: block
+  background: url('../assets/img/socials.png') no-repeat
+  border-radius: 50%
+  width: 60px
+  height: 60px
+  background-size: 500px
+  margin: 0 10px
+  @include bp-table
+    width: 80px
+    height: 80px
+    background-size: 660px
+    margin: 0 2vw
+  @include bp-max-480
+    width: 60px
+    height: 60px
+    background-size: 500px
+.g-vk
+  background-position: -375px 0
+  &:hover
+    background-position: -440px 0
+  @include bp-table
+    background-position: -494px 0
+    &:hover
+      background-position: -577px 0
+  @include bp-max-480
+    background-position: -375px 0
+    &:hover
+      background-position: -440px 0
+.g-fb
+  background-position: 0 0
+  &:hover
+    background-position: -62px 0
+  @include bp-table
+    background-position: 0 0
+    &:hover
+      background-position: -82px 0
+  @include bp-max-480
+    background-position: 0 0
+    &:hover
+      background-position: -62px 0
+.g-tw
+  background-position: -250px 0
+  &:hover
+    background-position: -312px 0
+  @include bp-table
+    background-position: -330px 0
+    &:hover
+      background-position: -412px 0
+  @include bp-max-480
+    background-position: -250px 0
+    &:hover
+      background-position: -312px 0
+.g-ok
+  background-position: -125px 0
+  &:hover
+    background-position: -188px 0
+  @include bp-table
+    background-position: -165px 0
+    &:hover
+      background-position: -248px 0
+  @include bp-max-480
+    background-position: -125px 0
+    &:hover
+      background-position: -188px 0

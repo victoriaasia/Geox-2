@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'pfdisplay';
+	src: url('fonts/pf/pfdisplay.eot');
+	src: local('☺'), url('fonts/pf/pfdisplay.woff') format('woff'), url('fonts/pf/pfdisplay.ttf') format('truetype'), url('fonts/pf/pfdisplay.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'yeseva';
+	src: url('fonts/ye/yeseva.eot');
+	src: local('☺'), url('fonts/ye/yeseva.woff') format('woff'), url('fonts/ye/yeseva.ttf') format('truetype'), url('fonts/ye/yeseva.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'opensans';
+	src: url('fonts/os/opensans.eot');
+	src: local('☺'), url('fonts/os/opensans.woff') format('woff'), url('fonts/os/opensans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
